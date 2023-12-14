@@ -27,42 +27,42 @@
                     <div id="profile-box-container">
                         <div id="profile-box">
                             <img src="img/avatar_io.jpg" alt="Tuo Contatto" width="30" height="30">
-                        <div>
-                      <i class="fas fa-icon1"></i>
-                      <i class="fas fa-icon2"></i>
-                      <i class="fas fa-icon3"></i>
+                            <div id="icon-profile-box">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
           
-            <div id="text-box-container">
-                <div id="text-box">
-                    <div id="campana">
-                        <i class="fa-regular fa-bell-slash"></i>
+                    <div id="text-box-container">
+                        <div id="text-box">
+                            <div id="campana">
+                                <i class="fa-regular fa-bell-slash"></i>
+                            </div>
+                            <div>
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <a href="">premi per attivare</a>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <p>Ricevi notifiche di nuovi messaggi</p>
-                        <a href="">premi per attivare</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+               
 
-            <div class="col-md-9">
-                <div v-if="activeContact">
-                    <h2 class="mb-3">{{ activeContact.name }}</h2>
-                    <div v-for="message in activeContact.messages" :key="message.date" :class="{ 'message': true, 'user-message': message.status === 'sent', 'contact-message': message.status === 'received' }">
-                    {{ message.message }}
-                    </div>
-                    <div class="input-group mt-3">
-                        <input type="text" class="form-control" v-model="newMessage" @keyup.enter="sendMessage" placeholder="Scrivi un messaggio">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" @click="sendMessage">Invia</button>
+                <div class="col-md-9">
+                    <div v-if="activeContact">
+                        <h2 class="mb-3">{{ activeContact.name }}</h2>
+                        <div v-for="message in activeContact.messages" :key="message.date" :class="{ 'message': true, 'user-message': message.status === 'sent', 'contact-message': message.status === 'received' }">
+                        {{ message.message }}
+                        </div>
+                        <div class="input-group mt-3">
+                            <input type="text" class="form-control" v-model="newMessage" @keyup.enter="sendMessage" placeholder="Scrivi un messaggio">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" @click="sendMessage">Invia</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-                
          
         <section id="app" class="container mx-auto">
             <div class="row">
