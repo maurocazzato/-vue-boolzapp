@@ -104,7 +104,7 @@ new Vue({
         },
         {
             name: 'Claudia',
-            avatar: 'img/avatar_2.jpg',
+            avatar: 'img/avatar_io.jpg',
             visible: true,
             messages: [
                 {
