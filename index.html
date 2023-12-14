@@ -4,8 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vue-boolzapp</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- link font awasome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+
 </head>
 <body>
-    
+    <!-- script vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <head>
+        <div class="container" id="greenContainer"></div>
+    </head>
+
+    <main>
+        <div id="app" class="container mx-auto mt-3" style="background-color: #fff;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div id="profile-box-container">
+                        <div id="profile-box">
+                            <img src="img/avatar_io.jpg" alt="Tuo Contatto" width="30" height="30">
+                        <div>
+                      <i class="fas fa-icon1"></i>
+                      <i class="fas fa-icon2"></i>
+                      <i class="fas fa-icon3"></i>
+                    </div>
+                </div>
+            </div>
+          
+            <div id="text-box-container">
+                <div id="text-box">
+                    <div id="campana">
+                        <i class="fa-regular fa-bell-slash"></i>
+                    </div>
+                    <div>
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="">premi per attivare</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-md-9">
+                <div v-if="activeContact">
+                    <h2 class="mb-3">{{ activeContact.name }}</h2>
+                    <div v-for="message in activeContact.messages" :key="message.date" :class="{ 'message': true, 'user-message': message.status === 'sent', 'contact-message': message.status === 'received' }">
+                    {{ message.message }}
+                    </div>
+                    <div class="input-group mt-3">
+                        <input type="text" class="form-control" v-model="newMessage" @keyup.enter="sendMessage" placeholder="Scrivi un messaggio">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" @click="sendMessage">Invia</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+         
+        <section id="app" class="container mx-auto">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="text" class="form-control mb-2" v-model="search" placeholder="Cerca contatti">
+                    <div class="list-group">
+                        <button v-for="contact in filteredContacts" :key="contact.name" type="button" class="list-group-item list-group-item-action" @click="selectContact(contact)">
+                        <img :src="contact.avatar" alt="contact.name" width="30" height="30" class="mr-2">
+                        {{ contact.name }}
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <!-- script js -->
+    <script src="js/script.js"></script>
 </body>
 </html>
