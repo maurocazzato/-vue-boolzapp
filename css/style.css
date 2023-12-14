@@ -4,3 +4,59 @@
     padding: 0;
    
 }
+main{
+    background-color: rgba(215,219,215,255);
+}
+#greenContainer{
+    background-color: rgba(0,150,136,255);
+    max-width: 100%;
+    height: 70px;
+}
+#profile-box-container{
+    background-color: rgba(234,234,234,255);
+    padding: 10px;
+    
+}
+#text-box-container{
+    padding: 10px;
+    background-color: rgba(142,218,252,255);
+}
+
+#profile-box,
+#text-box{
+display: flex;
+justify-content: center;  
+}
+
+a{
+    color: gray;
+    font-size: 8px;
+}
+p{
+    font-size: 12px;
+    
+
+}
+
+.fa-bell-slash{
+    font-size: 30px;
+    color: white;
+    margin-right: 10px;
+}
+
+
+#contacts-box {
+  margin-top: 10px;
+}
+
+.message { 
+    margin: 10px; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+.user-message { 
+    background-color: #4CAF50; 
+    color: #fff; }
+.contact-message { 
+    background-color: #fff; 
+}
