@@ -37,7 +37,7 @@ justify-content: center;
     display: flex;
     justify-content:space-between;
 }
-#icon-profile-box{
+.icon-profile-box{
 color: rgba(177,177,177,255);
 }
 
@@ -59,7 +59,27 @@ p{
 #contacts-box{
   margin-top: 10px;
 }
-
+/* chat box style */
+#chat-box{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-image: url("./img/WhatsApp_background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#contact-info-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #contact-info-container img {
+    margin-right: 10px;
+    border-radius: 50%;
+  }
 .message{ 
     margin: 10px; 
     padding: 10px; 
@@ -67,10 +87,14 @@ p{
 }
 .user-message{ 
     background-color: #4CAF50; 
+    align-self: flex-end;
     color: #fff;
+    max-width: 20%;
 }
 
 .contact-message{ 
-    background-color: #fff; 
+    background-color: #fff;
+    max-width: 20%;
+    align-self: flex-start;
 }
 
