@@ -29,7 +29,7 @@
                     <div id="profile-box-container">
                         <div id="profile-box">
                             <img src="img/avatar_io.jpg" alt="" width="30" height="30">
-                        <div id="icon-profile-box">
+                        <div class="icon-profile-box">
                             <i class="fa-solid fa-circle-notch"></i>
                             <i class="fa-solid fa-message"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -51,8 +51,18 @@
         </div>
 
             <div class="col-md-9">
-                <div v-if="activeContact">
-                    <h2 class="mb-3">{{ activeContact.name }}</h2>
+                <div id="chat-box" v-if="activeContact">
+                    <div id="contact-info-container">
+                        <div>
+                            <img v-if="activeContact" :src="activeContact.avatar" alt="Contatto" width="40" height="40">
+                            <span>{{ activeContact.name }}</span>
+                        </div>
+                        <div class="icon-profile-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-link"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
                     <div v-for="message in activeContact.messages" :key="message.date" :class="{ 'message': true, 'user-message': message.status === 'sent', 'contact-message': message.status === 'received' }">
                     {{ message.message }}
                     </div>
