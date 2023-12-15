@@ -21,48 +21,50 @@
     </head>
 
     <main>
-        <div id="app" class="container mx-auto mt-3" style="background-color: #fff;">
+        <div id="app" class="container mx-auto mt-3">
+
             <div class="row">
+
                 <div class="col-md-3">
                     <div id="profile-box-container">
                         <div id="profile-box">
-                            <img src="img/avatar_io.jpg" alt="Tuo Contatto" width="30" height="30">
-                            <div id="icon-profile-box">
-                                <i class="fa-solid fa-circle-notch"></i>
-                                <i class="fa-solid fa-message"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </div>
+                            <img src="img/avatar_io.jpg" alt="" width="30" height="30">
+                        <div id="icon-profile-box">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
-                    </div>
+                 </div>
+                </div>
           
-                    <div id="text-box-container">
-                        <div id="text-box">
-                            <div id="campana">
-                                <i class="fa-regular fa-bell-slash"></i>
-                            </div>
-                            <div>
-                                <p>Ricevi notifiche di nuovi messaggi</p>
-                                <a href="">premi per attivare</a>
-                            </div>
-                        </div>
+            <div id="text-box-container">
+                <div id="text-box">
+                    <div id="campana">
+                        <i class="fa-regular fa-bell-slash"></i>
                     </div>
-               
+                    <div>
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="">premi per attivare</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                <div class="col-md-9">
-                    <div v-if="activeContact">
-                        <h2 class="mb-3">{{ activeContact.name }}</h2>
-                        <div v-for="message in activeContact.messages" :key="message.date" :class="{ 'message': true, 'user-message': message.status === 'sent', 'contact-message': message.status === 'received' }">
-                        {{ message.message }}
-                        </div>
-                        <div class="input-group mt-3">
-                            <input type="text" class="form-control" v-model="newMessage" @keyup.enter="sendMessage" placeholder="Scrivi un messaggio">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" @click="sendMessage">Invia</button>
-                            </div>
+            <div class="col-md-9">
+                <div v-if="activeContact">
+                    <h2 class="mb-3">{{ activeContact.name }}</h2>
+                    <div v-for="message in activeContact.messages" :key="message.date" :class="{ 'message': true, 'user-message': message.status === 'sent', 'contact-message': message.status === 'received' }">
+                    {{ message.message }}
+                    </div>
+                    <div class="input-group mt-3">
+                        <input type="text" class="form-control" v-model="newMessage" @keyup.enter="sendMessage" placeholder="Scrivi un messaggio">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" @click="sendMessage">Invia</button>
                         </div>
                     </div>
                 </div>
             </div>
+                
          
         <section id="app" class="container mx-auto">
             <div class="row">
@@ -70,7 +72,7 @@
                     <input type="text" class="form-control mb-2" v-model="search" placeholder="Cerca contatti">
                     <div class="list-group">
                         <button v-for="contact in filteredContacts" :key="contact.name" type="button" class="list-group-item list-group-item-action" @click="selectContact(contact)">
-                        <img :src="contact.avatar" alt="contact.name" width="30" height="30" class="mr-2">
+                        <img :src="contact.avatar" alt="" width="30" height="30" class="mr-2">
                         {{ contact.name }}
                         </button>
                     </div>
