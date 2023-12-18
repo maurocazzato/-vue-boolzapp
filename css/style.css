@@ -40,6 +40,7 @@ p{
     
 
 }
+
 main{
     background-color: rgba(215,219,215,255);
     
@@ -74,6 +75,7 @@ main{
 #profile-box{
     display: flex;
     justify-content:space-between;
+    align-items: center;
 }
 .icon-profile-box{
     color: rgba(177,177,177,255);
@@ -97,11 +99,11 @@ main{
     background-size: cover;
     background-position: center;
     overflow:scroll;
-    max-height: 550px;
+    height: 540px;
     
 }
 #contact-info-container{
-    background-color: #f0f0f0;
+    background-color: rgba(234,234,234,255);
     padding: 10px;
     display: flex;
     align-items: center;
