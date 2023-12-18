@@ -119,12 +119,12 @@ main{
     background-color: #4CAF50; 
     align-self: flex-end;
     color: #fff;
-    max-width: 20%;
+    max-width: 30%;
 }
 
 .contact-message{ 
     background-color: #fff;
-    max-width: 20%;
+    max-width: 30%;
     align-self: flex-start;
 }
 
