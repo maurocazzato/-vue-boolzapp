@@ -4,6 +4,25 @@
     padding: 0;
    
 }
+
+body {
+    background-color: rgba(214,219,216,255);
+}
+
+.main-box{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0px 20px; 
+    padding: 20px; 
+}
+
+.boxverde{
+    width: 100%;
+    height: 70px;
+    background-color:rgba(0,150,136,255) ;
+}
+
+
 /* general style */
 img{
     border-radius: 50%;
@@ -13,12 +32,13 @@ a{
     font-size: 8px;
 }
 p{
-    font-size: 12px;
+    font-size: 15px;
     
 
 }
 main{
     background-color: rgba(215,219,215,255);
+    
     
 }
 #greenContainer{
@@ -28,33 +48,37 @@ main{
 }
 #app{
     background-color: #fff;
+    
 }
 
 /* colonna sinistra */
 #profile-box-container{
     background-color: rgba(234,234,234,255);
     padding: 15px;
+    margin-bottom: 5px;
     
 }
 #text-box-container{
     padding: 15px;
     background-color: rgba(142,218,252,255);
+    margin-bottom: 5px;
 }
 #text-box{
-display: flex;
-justify-content: center;  
+    display: flex;
+    justify-content: center;  
 }
 #profile-box{
     display: flex;
     justify-content:space-between;
 }
 .icon-profile-box{
-color: rgba(177,177,177,255);
+    color: rgba(177,177,177,255);
 }
 .fa-bell-slash{
     font-size: 30px;
     color: white;
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 #contacts-box{
@@ -68,6 +92,7 @@ color: rgba(177,177,177,255);
     background-image: url("../img/WhatsApp_background.jpg");
     background-size: cover;
     background-position: center;
+    
 }
 #contact-info-container{
     background-color: #f0f0f0;
