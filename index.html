@@ -93,12 +93,12 @@
                             </div>
                         </div>
 
-                        <div class="bg-secondary text-white text-center p-2 mt-4">
-                            <div class="input-group mt-3">
+                        <!-- barra chat -->
+                        <div id="textchat" class=" text-white text-center">
+                            <div class="input-group">
+                                <i class="fa-solid fa-face-smile"></i>
                                 <input type="text" class="form-control" v-model="newMessage" @keyup.enter="sendMessage" placeholder="Scrivi un messaggio">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" @click="sendMessage">Invia</button>
-                                </div>
+                                <i class="fa-solid fa-microphone"></i>
                             </div>
                         </div>
 
