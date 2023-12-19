@@ -205,17 +205,24 @@ new Vue({
       },
     //   sendMessage viene chiamata quando l'utente invia un messaggio.
       sendMessage() {
+        // Verifica se il testo del nuovo messaggio è vuoto o contiene solo spazi. Se è così, la funzione termina immediatamente senza effettuare ulteriori azioni.
         if (this.newMessage.trim() === '') return;
-  
+
+
+        // Ottiene la data corrente tramite l'oggetto Date() e formatta questa data in una stringa leggibile.
         const currentDate = new Date();
         const formattedDate = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+
+        console.log("ultimo messaggio ricevuto: " + formattedDate);
   
+        // Aggiunge un nuovo oggetto al array messages del contatto attivo. Questo oggetto rappresenta il messaggio inviato dall'utente e contiene la data formattata.
         this.activeContact.messages.push({
           date: formattedDate,
           message: this.newMessage,
           status: 'sent',
         });
   
+        // funzione setTimeout per simulare una risposta dopo 1 secondo. Aggiunge un secondo oggetto al array messages del contatto attivo(la risposta ricevuta).
         setTimeout(() => {
           this.activeContact.messages.push({
             date: formattedDate,
@@ -224,6 +231,7 @@ new Vue({
           });
         }, 1000);
   
+        // Dopo aver inviato il messaggio, reimposta il campo newMessage a una stringa vuota per consentire all'utente di inserire un nuovo messaggio.
         this.newMessage = '';
       },
     },
