@@ -63,7 +63,16 @@ main{
 }
 #text-box{
     display: flex;
-    justify-content: center;  
+    justify-content: center;
+    align-items: center;
+}
+
+#text-box p{
+    margin-bottom: -10px;
+}
+#text-box a{
+   color: gray;
+   font-size: 10px;
 }
 #profile-box{
     display: flex;
