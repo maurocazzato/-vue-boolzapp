@@ -68,7 +68,7 @@ main{
 }
 
 #text-box p{
-    margin-bottom: -10px;
+    margin-bottom: -5px;
 }
 #text-box a{
    color: gray;
@@ -101,7 +101,7 @@ main{
     background-size: cover;
     background-position: center;
     overflow:scroll;
-    height: 540px;
+    height: 520px;
     
 }
 #contact-info-container{
